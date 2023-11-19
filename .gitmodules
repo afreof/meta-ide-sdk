@@ -1,0 +1,4 @@
+[submodule "poky"]
+	path = poky
+	url = ssh://git@push.yoctoproject.org/poky-contrib
+	branch = adrianf/devtool-ide
