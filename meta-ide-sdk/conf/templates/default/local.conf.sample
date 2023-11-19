@@ -26,10 +26,15 @@ BB_DISKMON_DIRS ??= "\
     HALT,${SSTATE_DIR},100M,1K \
     HALT,/tmp,10M,1K"
 
+# Support UI of Qemu
+PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
+
 # Machine selection
-MACHINE ??= "qemux86-64"
+# ARM64 target, x86-64 build machine to check cross-compilation
+MACHINE ?= "qemuarm64"
+
+#MACHINE ?= "qemux86-64"
 #MACHINE ?= "qemuarm"
-#MACHINE ?= "qemuarm64"
 #MACHINE ?= "qemumips"
 #MACHINE ?= "qemumips64"
 #MACHINE ?= "qemuppc"
