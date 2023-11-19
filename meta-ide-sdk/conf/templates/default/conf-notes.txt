@@ -1,0 +1,15 @@
+
+Bootstrap the eSDK with VSCode configuration:
+  devtool modify cmake-example
+  devtool modify meson-example
+  devtool ide-sdk cmake-example meson-example core-image-minimal \
+    -c --debug-build-config
+
+Start Qemu:
+  runqemu nographic
+
+Open VSCode in the workspace folder of the recipe:
+  code $BUILDIR/workspace/sources/cmake-example
+
+Use devtool ide-sdk --ide=none for other IDEs.
+Use devtool ide-sdk --help for more options.
