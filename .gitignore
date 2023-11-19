@@ -1,0 +1,14 @@
+/build*/*
+!/build*/conf/
+/build*/conf/*
+!/build*/conf/bblayers.conf
+!/build*/conf/site.conf
+.vscode/
+*.orig
+*.patch
+*.pyc
+*.pyo
+*.rej
+*.swp
+*~
+vscode-bitbake-build/
