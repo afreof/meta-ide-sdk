@@ -48,3 +48,10 @@ export OEROOT
     return 1
 }
 unset OEROOT
+
+# Generate a minimal env file which can be used e.g. to debug bitbake with a Python debugger
+cat << EOFbuildenv > "$BUILDDIR/.buildenv"
+BBPATH="$BBPATH"
+BUILDDIR="$BUILDDIR"
+PATH="$PATH"
+EOFbuildenv
